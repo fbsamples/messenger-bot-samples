@@ -1,0 +1,55 @@
+{
+  "name": "customized-sharing",
+  "version": "0.1.0",
+  "engines": {
+    "node": "7.4.x",
+    "npm": "4.0.x"
+  },
+  "description": "Demo of Account Linking with Facebook Messenger 1.4",
+  "author": "MetaLab",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "start": "./node_modules/.bin/babel-node app.js",
+    "dev": "nodemon app.js --exec babel-node",
+    "lint-js": "eslint .",
+    "lint-css": "recess ./public/stylesheets/style.css --noIDs false --noUnderscores false",
+    "test": "NODE_ENV=test mocha --compilers js:babel-core/register --recursive",
+    "quality": "yarn lint-js; yarn lint-css; yarn test"
+  },
+  "dependencies": {
+    "babel": "^6.5.2",
+    "babel-cli": "^6.22.2",
+    "babel-core": "^6.22.1",
+    "babel-preset-latest": "^6.22.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "body-parser": "^1.16.0",
+    "cookie-parser": "^1.4.3",
+    "debug": "^2.6.0",
+    "express": "^4.14.1",
+    "jade": "^1.11.0",
+    "lodash": "^4.17.4",
+    "morgan": "^1.7.0",
+    "recess": "^1.1.9",
+    "request": "^2.79.0",
+    "serve-favicon": "^2.3.2",
+    "uuid": "^3.0.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-eslint": "^7.1.1",
+    "babel-plugin-module-resolver": "^2.5.0",
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "eslint": "^3.14.1",
+    "eslint-config-metalab": "^5.0.1",
+    "eslint-import-resolver-babel-module": "^3.0.0",
+    "eslint-plugin-babel": "^4.0.1",
+    "eslint-plugin-filenames": "^1.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-lodash-fp": "^2.0.1",
+    "eslint-plugin-react": "^6.9.0",
+    "mocha": "^3.2.0",
+    "nodemon": "^1.11.0"
+  }
+}

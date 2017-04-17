@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="46px" height="46px" viewBox="0 0 46 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Unchecked</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M46,23.2839506 C46,10.2971852 35.7028148,0 22.7160494,0 C10.2971852,0 0,10.2971852 0,23.2839506 C0,35.7028148 10.2971852,46 22.7160494,46 C35.7028148,46 46,35.7028148 46,23.2839506 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="46" height="46" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Line/Checklist---Line" transform="translate(-31.000000, -25.000000)" stroke="#CCCCCC" fill="#FFFFFF">
+            <g id="Checkmark/Unchecked" transform="translate(31.000000, 25.000000)">
+                <g id="Unchecked">
+                    <use id="Fill-" mask="url(#mask-2)" stroke-width="4" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

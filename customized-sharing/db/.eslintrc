@@ -1,0 +1,4 @@
+rules:
+  import/no-commonjs: 0
+  filenames/match-regex: 0
+  camelcase: 0

@@ -1,0 +1,8 @@
+extends:
+  - metalab/base
+  - metalab/browser
+  - metalab/react
+env:
+  node: true
+rules:
+  no-console: 0

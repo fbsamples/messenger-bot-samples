@@ -1,0 +1,350 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+  color: #4A4A4A;
+  background-color: #FAFAFA;
+}
+
+body,
+.weui-input,
+.weui-cells,
+.weui-btn {
+  font-size: 13px;
+}
+
+.giftSubtitle {
+  font-size: 11px;
+}
+
+.app {
+  margin-bottom: 7em;
+}
+
+.weui-cells__title {
+  text-transform: uppercase;
+}
+
+.weui-btn {
+  padding: 0.5rem;
+}
+
+.weui-cell {
+  padding: 1rem 1rem 1rem 0.75rem;
+}
+
+.weui-uploader__input-box {
+  width: 2rem;
+  height: 2rem;
+
+  padding: 0;
+  margin: 0;
+
+  border: none;
+}
+
+.weui-uploader__input-box:before {
+  width: 1rem;
+  height: 1px;
+}
+
+.weui-uploader__input-box:after {
+  width: 1px;
+  height: 1rem;
+}
+
+.weui-loading {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.weui-cells_checkbox .weui-check:checked + .weui-icon-checked:before {
+  color: #0083FF;
+  border: none;
+}
+
+.weui-uploader__input-box:before,
+.weui-uploader__input-box:after,
+::-webkit-input-placeholder,
+.complete,
+.weui-footer,
+.weui-cell__hd,
+.weui-cell__ft {
+  color: #CCC;
+}
+
+.weui-slider__track {
+  opacity: 0;
+}
+
+.weui-slider__inner {
+  margin-right: 14px;
+  margin-left: 14px;
+
+  background-color: #888;
+}
+
+.weui-slider__inner::before,
+.weui-slider__inner::after {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+
+  width: 14px;
+  height: 2px;
+
+  background-color: #888;
+
+  content: '';
+}
+
+.weui-slider__inner::before {
+  left: -13px;
+}
+
+.weui-slider__inner::after {
+  right: -13px;
+}
+
+.weui-slider__handler {
+  z-index: 2;
+}
+
+.gift-image {
+  position: absolute;
+  right: 20px;
+  top: 8px;
+}
+
+.gift-image img {
+  width: 1em;
+  height: 1em;
+
+  font-size: 3rem;
+
+  border: thin solid rgba(200, 200, 200, 0.3);
+  border-radius: 5px;
+}
+
+#gift-type img {
+  margin-top: 0.5rem;
+}
+
+#gift-type .weui-check__label {
+  padding: 0.5rem 1rem 0.5rem 0.75rem;
+}
+
+#frequency .weui-cell__bd {
+  margin-left: 0.5rem;
+}
+
+.weui-btn_primary:not(.weui-btn_disabled):active,
+.weui-btn_primary {
+  background-color: #0083ff;
+}
+
+.weui-icon-success-circle {
+  color: #0083ff;
+}
+
+.weui-switch:checked, .weui-switch-cp__input:checked ~ .weui-switch-cp__box {
+  background-color: #0083ff;
+  border-color: #0083ff;
+}
+
+#env-slider {
+  position: relative;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  background-color: white;
+  border-top: thin solid #EAEAEA;
+}
+
+#date-of-birth {
+  height: 1rem;
+  padding: 1.25rem 1rem;
+}
+
+#display-date {
+  position: absolute;
+  width: 100vw;
+}
+
+#display-date + .weui-cell__bd {
+  height: 1rem;
+}
+
+/**
+ * Overlay an invisible date input element
+ * This is to get the native date picker, but show a pretty date underneath
+ */
+#datepicker {
+  position: absolute;
+  z-index: 5;
+
+  width: 150vw;
+  height: 5rem;
+
+  margin-top: -2rem;
+  margin-left: -2em;
+
+  opacity: 0;
+}
+
+.slider-option {
+  position: absolute;
+}
+
+.active {
+  color: #888;
+}
+
+#dry {
+  left: 1rem;
+}
+
+#normal {
+  width: 100%;
+  text-align: center
+}
+
+#humid {
+  right: 1rem;
+}
+
+section {
+  margin-top: 2rem;
+}
+
+.weui-btn-area {
+  margin-top: 2em;
+  margin-bottom: 2rem;
+}
+
+#arrivalPeriod .weui-cell__hd:first-child {
+  display: none;
+}
+
+#arrival-periods .weui-cell__bd {
+  line-height: 1.5rem;
+}
+
+.see-options {
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+  width: 100%;
+  height: 4em;
+  padding: 0.75rem 1rem;
+  margin: 0;
+  background-color: #fff;
+  border-top: solid 1px #EAEAEA;
+}
+
+.see-options > button {
+  width: calc(100vw - 2rem);
+  margin: 0;
+}
+
+.static-page {
+  display: flex;
+  height: 100vh;
+  font-weight: 200;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.static-page-body {
+  width: 30em;
+}
+
+.static-page h1 {
+  font-weight: 300;
+}
+
+.static-page-subtitle {
+  color: #888888;
+}
+
+#product {
+  background-color: #FAFAFA;
+}
+
+#product h1 {
+  padding: 0.25rem 0;
+  color: black;
+}
+
+.product-body {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  max-width: 600px;
+  padding: 1rem 1rem 6rem;
+}
+
+.product-details {
+  margin: -0.75rem 1rem 1rem 1rem;
+  text-align: left;
+}
+
+.product-image {
+  align-self: flex-start;
+  background: #EAEAEA;
+  height: auto;
+  max-height: 150px;
+  max-width: 150px;
+  min-height: 72px;
+  min-width: 72px;
+  width: 25%;
+}
+
+.indicator {
+  margin-left: 6px;
+}
+
+.indicator .weui-icon-success-circle {
+  margin-top: -3px;
+  margin-left: -3px;
+}
+
+#arrivalPeriod .weui-check__label {
+  position: relative;
+  height: 24px;
+}
+
+#arrivalPeriod .indicator {
+  margin-top: 5px;
+}
+
+.checkbox-text {
+  position: absolute;
+  left: 49px;
+  width: 75vw;
+}
+
+.gift-category {
+  position: relative;
+  height: 65px;
+}
+
+.gift-title {
+  font-size: 1.1rem;
+  color: #222;
+  position: absolute;
+  top: 18px;
+}
+
+.gift-subtitle {
+  position: absolute;
+  color: #999;
+  position: absolute;
+  bottom: 18px;
+}
+
+.indicator img {
+  width: 1.3rem;
+  height: 1.3rem;
+}

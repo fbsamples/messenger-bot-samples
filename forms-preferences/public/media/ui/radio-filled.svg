@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="46px" height="46px" viewBox="0 0 46 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>radio-filled</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <ellipse id="path-1" cx="22.559387" cy="23" rx="22.559387" ry="23"></ellipse>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="45.1187739" height="46" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Preferences" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Preferences---Web-View" transform="translate(-32.000000, -561.000000)">
+            <g id="Gift-Type" transform="translate(0.000000, 420.000000)">
+                <g id="radio-filled" transform="translate(32.000000, 141.000000)">
+                    <use id="Oval-15" stroke="#0084FF" mask="url(#mask-2)" stroke-width="4" xlink:href="#path-1"></use>
+                    <ellipse id="Oval" fill="#0084FF" cx="22.6551724" cy="23" rx="17.6551724" ry="18"></ellipse>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

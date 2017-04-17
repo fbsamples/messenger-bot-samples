@@ -1,0 +1,10 @@
+{
+  "presets": [
+    "latest",
+    "stage-0",
+    "react"
+  ],
+  "plugins": [
+    "transform-class-properties"
+  ]
+}

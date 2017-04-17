@@ -1,0 +1,278 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  color: #4A4A4A;
+  background-color: #FAFAFA;
+}
+
+body,
+.weui-input,
+.weui-cells {
+  font-size: 14px;
+}
+
+.weui-btn {
+  font-size: 1rem;
+}
+
+.weui-cells::after {
+  border-bottom: none;
+}
+
+.weui-panel {
+  overflow: initial;
+}
+
+.weui-cell {
+  padding: 1rem 1rem 1rem 0.75rem;
+}
+
+.weui-cell:before {
+  left: 0;
+}
+
+#list {
+  margin-bottom: 4rem;
+}
+
+.page-enter ,
+.page-leave.page-leave-active {
+  height: 20px;
+  opacity: 0;
+  transition: all 250ms ease-in-out;
+}
+
+.page-enter.page-enter-active,
+.page-leave {
+  height: 200px;
+  opacity: 1;
+  transition: all 250ms ease-in-out;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.invite-icon {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.invite-icon.share {
+  background-image: url('./media/share_arrow.png');
+  background-size: cover;
+}
+
+.invite-icon.send {
+  background-image: url('./media/send_arrow.png');
+  background-size: cover;
+}
+
+@media only screen and (min-device-pixel-ratio: 1.5),
+  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+  .invite-icon.share {
+    background-image: url('./media/share_arrow@2x.png');
+  }
+
+  .invite-icon.send {
+    background-image: url('./media/send_arrow@2x.png');
+  }
+}
+
+#invite {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), #FFF 40%);
+}
+
+#invite button {
+  width: 100%;
+  height: 2.75rem;
+  margin: 0;
+  background-color: #0083FF;
+}
+
+#sticky {
+  min-height: calc(100vh - 4em);
+}
+
+#viewers {
+  width: 100%;
+  padding: .75rem 0 0;
+  text-align: center;
+}
+
+#viewer-count p {
+  font-size: 75%;
+}
+
+.viewers-list-cntnr {
+  display: flex;
+  padding: 0 1rem 0.25rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  justify-content: center;
+}
+
+.viewer {
+  width: 3.25rem;
+  height: 3.25rem;
+  background-color: #CCC;
+  border-radius: 50%;
+  opacity: 0.33;
+  transition: all 500ms ease-in-out;
+  object-fit: cover;
+}
+
+.viewer + .viewer {
+  margin-left: 0.5rem;
+}
+
+.viewer.active {
+  opacity: 1;
+}
+
+.viewer-enter {
+  width: 0;
+  height: 0;
+}
+
+.viewers-enter.viewers-enter-active {
+  width: auto;
+  height: auto;
+  transition: all 500ms ease-in-out;
+}
+
+
+#title {
+  padding: 0 1rem;
+}
+
+#title input {
+  height: 2rem;
+  margin-top: 1rem;
+  font-size: 1.33rem;
+}
+
+#input-indicator {
+  font-size: 2rem;
+}
+
+#new-item {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.weui-uploader__input-box {
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.weui-uploader__input-box:before {
+  width: 1rem;
+  height: 1px;
+}
+
+.weui-uploader__input-box:after {
+  width: 1px;
+  height: 1rem;
+}
+
+.complete {
+  text-decoration: line-through;
+}
+
+#updating {
+  height: 1.5em;
+  margin: 1rem;
+}
+
+#new-item-text {
+  overflow: hidden;
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+}
+
+#new-item-text.resetting {
+  width: 0;
+  opacity: 0.4;
+  transition: all 600ms ease-in-out;
+}
+
+.item {
+  /* for animation */
+  margin-bottom: 0rem;
+  opacity: 1;
+  transition: all 500ms ease-out;
+}
+
+.item-enter {
+  margin-bottom: -3.4rem;
+  opacity: 0;
+}
+
+.item-enter.item-active {
+  margin-bottom: 0;
+  opacity: 1;
+  transition: all 500ms ease-out;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.weui-loading {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.weui-cells_checkbox .weui-check:checked + .weui-icon-checked:before {
+  color: #0083FF;
+}
+
+.weui-uploader__input-box:before,
+.weui-uploader__input-box:after,
+::-webkit-input-placeholder,
+.complete,
+.weui-footer,
+.weui-cell__hd,
+.weui-cell__ft {
+  color: #7F7F7F;
+}
+
+
+#oops {
+  display: flex;
+  height: 100vh;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+#oops-body {
+  width: 30em;
+}
+
+#oops h1 {
+  font-weight: 300;
+}
+
+#oops-subtitle {
+  color: #888;
+}
