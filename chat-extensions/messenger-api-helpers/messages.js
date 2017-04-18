@@ -198,7 +198,7 @@ const shareListMessage = (apiUri, listId, title, buttonText) => {
         elements: [{
           title: title,
           image_url: `${apiUri}/media/button-cover.png`,
-          subtitle: 'A shared list from TaskBot',
+          subtitle: 'A shared list from Tasks',
           default_action: {
             type: 'web_url',
             url: urlToList,

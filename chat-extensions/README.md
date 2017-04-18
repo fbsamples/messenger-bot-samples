@@ -1,5 +1,5 @@
-# Chat Extensions (TaskBot)
-This is the folder for TaskBot, a bot that demonstrates [Chat Extensions](https://developers.facebook.com/docs/messenger-platform/design-best-practices/guides/chat-extensions) on the Messenger Platform.
+# Chat Extensions (Tasks)
+This is the folder for Tasks, a bot that demonstrates [Chat Extensions](https://developers.facebook.com/docs/messenger-platform/design-best-practices/guides/chat-extensions) on the Messenger Platform.
 
 **[<img src="../docs/assets/ViewMessenger.png" width="200">](https://m.me/MessengerTaskBot)**
 
