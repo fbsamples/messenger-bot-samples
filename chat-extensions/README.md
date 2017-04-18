@@ -90,7 +90,7 @@ $ git subtree push --prefix customized-sharing heroku master
 ```
 
 ##### It should look like this in your terminal
-<img src="../docs/assets/sharing_terminal.png" width="600">
+<img src="../docs/assets/account_terminal.png" width="600">
 
 ##### Other useful commands for pushing the code to Heroku
 To force push to Heroku, useful for moving your changes from your machine to Heroku, use this command:

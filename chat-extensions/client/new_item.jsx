@@ -50,7 +50,7 @@ const NewItem = ({
 
   return (
     <Cell id='new-item'>
-      <CellHeader id='input-indicator' onClick={addNewItem}>
+      <CellHeader id='input-indicator' onClick={onSubmit}>
         <div className='weui-uploader__input-box' />
       </CellHeader>
 
