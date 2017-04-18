@@ -29,7 +29,6 @@ outlined on that page and do not file a public issue.
 ## Coding Style  
 * 2 spaces for indentation rather than tabs
 * 80 character line length
-* ...
 
 ## License
 By contributing to messenger-bot-samples, you agree that your contributions will be licensed
