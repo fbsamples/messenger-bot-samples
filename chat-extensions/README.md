@@ -85,8 +85,8 @@ $ heroku config:set APP_URL='https://{URL_TO_HEROKU_APP}'
 # Note the token can be any word chosen by you and is used to by Facebook to check that they have the correct server for your Messenger Bot
 $ heroku config:set WEBHOOK_TOKEN='random_demo_token_123'
 
-# This pushes just the customized-sharing folder to Heroku
-$ git subtree push --prefix customized-sharing heroku master
+# This pushes just the chat-extensions folder to Heroku
+$ git subtree push --prefix chat-extensions heroku master
 ```
 
 ##### It should look like this in your terminal
@@ -94,7 +94,7 @@ $ git subtree push --prefix customized-sharing heroku master
 
 ##### Other useful commands for pushing the code to Heroku
 To force push to Heroku, useful for moving your changes from your machine to Heroku, use this command:
-* `git push --force heroku 'git subtree split --prefix customized-sharing HEAD':master`
+* `git push --force heroku 'git subtree split --prefix chat-extensions HEAD':master`
 
 #### 2. Setup your Bot on Facebook
 
@@ -142,7 +142,7 @@ before you commit and push your changes.
 ### Running locally
 You may want to run this bot on a platform outside of Heroku or simply have it available locally for testing purposes.
 ```bash
-$ cd path/to/repo/customized-sharing
+$ cd path/to/repo/chat-extensions
 $ createdb list_bot_dev
 $ createdb list_bot_test
 $ yarn install
@@ -159,6 +159,6 @@ $ yarn start
 
 ### Running tests & linters
 ```bash
-$ cd path/to/repo/customized-sharing
+$ cd path/to/repo/chat-extensions
 $ yarn quality
 ```

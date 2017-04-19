@@ -1,13 +1,13 @@
 {
-  "name": "customized-sharing",
+  "name": "account-linking",
   "version": "0.1.0",
   "engines": {
     "node": "7.4.x",
     "npm": "4.0.x"
   },
-  "description": "Demo of Account Linking with Facebook Messenger 1.4",
-  "author": "MetaLab",
-  "license": "UNLICENSED",
+  "description": "Design best practices demo for Account Linking on the Messenger Platform.",
+  "author": "Facebook Inc.",
+  "license": "See LICENSE file.",
   "private": true,
   "scripts": {
     "start": "./node_modules/.bin/babel-node app.js",

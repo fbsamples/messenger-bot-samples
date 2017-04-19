@@ -1,4 +1,4 @@
-# Forms & Preferences (Victoria Belle)
+# GUI in the Webview (Victoria Belle)
 This is the folder for Victoria Belle, a bot that demonstrates best practices for [creating GUI in the Messenger Platform's webview](https://developers.facebook.com/docs/messenger-platform/design-best-practices/guides/create-gui).
 
 **[<img src="../docs/assets/ViewMessenger.png" width="200">](https://m.me/VictoriaBelleCo)**
@@ -72,8 +72,8 @@ $ heroku config:set SERVER_URL='https://{URL_TO_HEROKU_APP}'
 # Note the token can be any word chosen by you and is used to by Facebook to check that they have the correct server for your Messenger Bot
 $ heroku config:set WEBHOOK_TOKEN='random_demo_token_123'
 
-# This pushes just the forms-preferences folder to Heroku
-$ git subtree push --prefix forms-preferences heroku master
+# This pushes just the gui-webview folder to Heroku
+$ git subtree push --prefix gui-webview heroku master
 ```
 
 ##### It should look like this in your terminal
@@ -81,7 +81,7 @@ $ git subtree push --prefix forms-preferences heroku master
 
 ##### Other useful commands for pushing the code to Heroku
 To force push to Heroku, useful for moving your changes from your machine to Heroku, use this command:
-* `git push --force heroku 'git subtree split --prefix forms-preferences HEAD':master`
+* `git push --force heroku 'git subtree split --prefix gui-webview HEAD':master`
 
 #### 2. Setup your Bot on Facebook
 
@@ -129,7 +129,7 @@ before you commit and push your changes.
 ### Running locally
 You may want to run this bot on a platform outside of Heroku or simply have it available locally for testing purposes.
 ```bash
-$ cd path/to/repo/forms-preferences
+$ cd path/to/repo/gui-webview
 $ yarn install
 $ yarn build
 $ export DEMO=true
@@ -138,6 +138,6 @@ $ yarn start
 
 ### Running tests
 ```bash
-$ cd path/to/repo/forms-preferences
+$ cd path/to/repo/gui-webview
 $ yarn quality
 ```
