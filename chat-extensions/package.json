@@ -1,10 +1,13 @@
 {
-  "name": "customized-sharing",
+  "name": "chat-extensions",
   "version": "0.1.0",
   "engines": {
     "node": "7.4.x",
     "npm": "4.0.x"
   },
+  "description": "Design best practices demo for Chat Extensions on the Messenger Platform.",
+  "author": "Facebook Inc.",
+  "license": "See LICENSE file.",
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
