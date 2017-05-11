@@ -77,7 +77,9 @@ This demo bot is immediately runnable on Heroku!
 $ cd /path/to/fb-chatbots
 
 $ heroku create
-$ heroku addons:create heroku-postgresql
+
+# HEROKU_APPID is given to you from the above command. Run `heroku apps` to list them all.
+$ heroku addons:create heroku-postgresql --app {HEROKU_APPID}
 
 # URL_TO_HEROKU_APP is the URL given to you from the above command
 $ heroku config:set APP_URL='https://{URL_TO_HEROKU_APP}'
