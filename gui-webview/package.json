@@ -2,7 +2,7 @@
   "name": "gui-webview",
   "version": "0.1.0",
   "engines": {
-    "node": "7.4.x",
+    "node": ">7.10.1",
     "npm": "4.0.x"
   },
   "description": "Demo showing how to the Messenger Platform's webview to create GUI in a bot.",

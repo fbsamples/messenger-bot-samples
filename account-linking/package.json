@@ -2,7 +2,7 @@
   "name": "account-linking",
   "version": "0.1.0",
   "engines": {
-    "node": "7.4.x",
+    "node": ">7.10.1",
     "npm": "4.0.x"
   },
   "description": "Design best practices demo for Account Linking on the Messenger Platform.",
