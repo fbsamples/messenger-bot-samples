@@ -13,22 +13,24 @@
     <div id="content"></div>
     <script>
      <% if (locals.gift) { %>
-     const gift = JSON.parse('<%- locals.gift  %>');
+       const gift = JSON.parse('<%- locals.gift  %>');
      <% } else { %>
-     const gift = null;
+       const gift = null;
      <% } %>
      <% if (demo) { %>
-     window.attachApp("demo", gift);
+       window.attachApp("demo", gift);
      <% } else { %>
-     window.extAsyncInit = function() {
-       // the Messenger Extensions JS SDK is done loading
-       MessengerExtensions.getUserID(function success(uids) {
-         window.attachApp(uids.psid, gift);
-       }, function error(err) {
-         window.attachApp();
-       });
-     };
-
+       window.extAsyncInit = function() {
+         // the Messenger Extensions JS SDK is done loading
+         MessengerExtensions.getContext(
+           '618176275047101',
+           function success(context) {
+             window.attachApp(context.psid, gift);
+           }, function error(err) {
+             window.attachApp();
+         });
+       };
+     <% } %>
      (function(doc, script, domId){
        var js, fjs = doc.getElementsByTagName(script)[0];
        if (doc.getElementById(domId)) {
@@ -41,7 +43,6 @@
 
        fjs.parentNode.insertBefore(js, fjs);
      }(document, 'script', 'Messenger'));
-     <% } %>
     </script>
   </body>
 </html>
