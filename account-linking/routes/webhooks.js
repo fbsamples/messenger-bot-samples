@@ -59,6 +59,9 @@ router.post('/', (req, res) => {
     // Iterate over each entry
     // There may be multiple if batched
     data.entry.forEach((pageEntry) => {
+      if (!pageEntry.messaging) {
+        return;
+      }
       // Iterate over each messaging event
       pageEntry.messaging.forEach((messagingEvent) => {
         console.log({messagingEvent});
