@@ -1,6 +1,6 @@
 /* eslint-disable */
-
 var path = require('path');
+const webpack = require('webpack');
 
 module.exports = [{
   context: path.join(__dirname),
@@ -25,5 +25,13 @@ module.exports = [{
       path.join(__dirname, 'client'),
       'node_modules'
     ]
-  }
+  },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        APP_ID: JSON.stringify(process.env.APP_ID),
+        PAGE_ID: JSON.stringify(process.env.PAGE_ID),
+      },
+    })
+  ]
 }];

@@ -11,6 +11,7 @@ import castArray from 'lodash/castArray';
 // ===== MESSENGER =============================================================
 import api from './api';
 import messages from './messages';
+import logger from './fba-logging';
 
 // Turns typing indicator on.
 const typingOn = (recipientId) => {
@@ -67,8 +68,10 @@ const sendReadReceipt = (recipientId) => {
 };
 
 // Send the initial message telling the user about the promotion.
-const sendHelloRewardMessage = (recipientId) =>
+const sendHelloRewardMessage = (recipientId) => {
+  logger.fbLog("send_message", {payload: "hello_reward"}, recipientId);
   sendMessage(recipientId, messages.helloRewardMessage);
+};
 
 // Send a message indicating to a user that their preferences have changed.
 const sendPreferencesChangedMessage = (recipientId) => {
@@ -95,6 +98,11 @@ const sendChooseGiftMessage = (recipientId) => {
 const sendGiftChangedMessage = (recipientId) =>
   sendMessage(recipientId, messages.giftChangedMessage(recipientId));
 
+// Send a message that a user has purchased a gift.
+const sendGiftPurchasedMessage = (recipientId, giftId) =>
+  sendMessage(recipientId, messages.giftPurchasedMessage(giftId));
+
+
 export default {
   sendMessage,
   sendReadReceipt,
@@ -102,4 +110,5 @@ export default {
   sendPreferencesChangedMessage,
   sendChooseGiftMessage,
   sendGiftChangedMessage,
+  sendGiftPurchasedMessage,
 };

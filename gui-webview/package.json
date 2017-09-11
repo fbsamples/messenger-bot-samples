@@ -20,8 +20,8 @@
   },
   "dependencies": {
     "babel-cli": "^6.23.0",
-    "babel-core": "^6.23.1",
-    "babel-loader": "^6.3.2",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
     "babel-plugin-module-resolver": "^2.5.0",
     "babel-plugin-react-transform": "^2.0.2",
     "babel-plugin-transform-class-properties": "^6.23.0",
@@ -50,11 +50,12 @@
     "serve-favicon": "~2.3.0",
     "style-loader": "^0.13.1",
     "uglify-loader": "^1.4.0",
-    "webpack": "^2.2.1",
+    "webpack": "^3.6.0",
     "weui": "^1.1.1",
     "whatwg-fetch": "^2.0.2"
   },
   "devDependencies": {
+    "babel-preset-env": "^1.6.0",
     "chai": "^3.5.0",
     "eslint-config-metalab": "^5.0.1",
     "eslint-import-resolver-babel-module": "^3.0.0",

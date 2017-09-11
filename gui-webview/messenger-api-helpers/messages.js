@@ -17,6 +17,8 @@
 
 // ===== STORES ================================================================
 import UserStore from '../stores/user-store';
+import GiftStore from '../stores/gift-store';
+
 
 // ===== UTILS =================================================================
 import {dateString} from '../utils/date-string-format';
@@ -112,7 +114,7 @@ const currentGiftText = {
  */
 const currentGiftButton = (recipientId) => {
   const user = UserStore.get(recipientId);
-  const gift = user.preferedGift;
+  const gift = user.preferredGift;
 
   return {
     attachment: {
@@ -195,9 +197,22 @@ const giftOptionsCarosel = (recipientId) => {
  * @returns {Object} Message payload
  */
 const giftChangedMessage = (recipientId) => {
-  const {preferedGift, dateOfBirth} = UserStore.get(recipientId);
+  const {preferredGift, dateOfBirth} = UserStore.get(recipientId);
   return {
-    text: `Perfect! You can look forward to the ${preferedGift.name} on ${dateString(dateOfBirth)}. `,
+    text: `Perfect! You can look forward to the ${preferredGift.name} on ${dateString(dateOfBirth)}. `,
+  };
+};
+
+/**
+ * Message thanking user for their purchase.
+ *
+ * @param {String} giftId Id of the purchased item.
+ * @returns {Object} Message payload
+ */
+const giftPurchasedMessage = (giftId) => {
+  const purchasedItem = GiftStore.get(giftId);
+  return {
+    text: `Thank you for purchasing the ${purchasedItem.name}!  `,
   };
 };
 
@@ -236,6 +251,7 @@ export default {
   giftOptionsText,
   giftOptionsCarosel,
   giftChangedMessage,
+  giftPurchasedMessage,
   persistentMenu,
   getStarted,
 };

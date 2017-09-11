@@ -10,13 +10,21 @@ import sendApi from './send';
 
 // ===== STORES ================================================================
 import UserStore from '../stores/user-store';
+import logger from './fba-logging';
+const util = require('util');
 
 // Updates a users preferred gift, then notifies them of the change.
 const handleNewGiftSelected = (senderId, giftId) => {
   const user = UserStore.get(senderId);
-  user.setPreferedGift(giftId);
+  user.setPreferredGift(giftId);
   sendApi.sendGiftChangedMessage(senderId);
 };
+
+// Thanks user for purchasing gift.
+const handleNewGiftPurchased = (senderId, giftId) => {
+  sendApi.sendGiftPurchasedMessage(senderId, giftId);
+};
+
 
 /*
  * handleReceivePostback — Postback event handler triggered by a postback
@@ -70,8 +78,28 @@ const handleReceiveMessage = (event) => {
   if (message.text) { sendApi.sendHelloRewardMessage(senderId); }
 };
 
+/*
+ * handleReceiveReferral - Message Event called when a referral event is sent to
+ * your page. Read more about the 'referral' object at: https://developers.
+ * facebook.com/docs/messenger-platform/reference/webhook-events/messaging_referrals/
+ */
+const handleReceiveReferral = (event) => {
+  const senderId = event.sender.id;
+  var payload = {};
+  if (event.referral.ref){
+    payload["ref"] = event.referral.ref;
+  }
+  if (event.referral.ad_id){
+    payload["ad_id"] = event.referral.ad_id;
+  }
+  logger.fbLog("referral", payload, senderId);
+};
+
+
 export default {
   handleReceivePostback,
   handleReceiveMessage,
+  handleReceiveReferral,
   handleNewGiftSelected,
+  handleNewGiftPurchased,
 };

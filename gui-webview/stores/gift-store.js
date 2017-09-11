@@ -61,6 +61,7 @@ GIFT_STORE.insert(
     },
     'A light, non-greasy formula, providing effective and refreshing hydration.',
     MOISTURIZER,
+    1.59,
   ));
 
 GIFT_STORE.insert(
@@ -73,6 +74,7 @@ GIFT_STORE.insert(
     },
     'A rich, creamy moisturizer that smooths & softens extremely dry skin.',
     MOISTURIZER,
+    8.99,
   ));
 
 GIFT_STORE.insert(
@@ -85,6 +87,7 @@ GIFT_STORE.insert(
     },
     'Super Revitalizing Cream reveals beautifully resilient-looking skin.',
     MOISTURIZER,
+    12.49,
   ));
 
 GIFT_STORE.insert(
@@ -97,6 +100,7 @@ GIFT_STORE.insert(
     },
     'A rich lathering cleanser to purify and hydrate all skin types.',
     CLEANER,
+    32.22,
   ));
 
 GIFT_STORE.insert(
@@ -109,6 +113,7 @@ GIFT_STORE.insert(
     },
     'An energizing cleanser that removes impurities and dead skin cells for a more refined skin texture.',
     CLEANER,
+    1.99,
   ));
 
 GIFT_STORE.insert(
@@ -121,6 +126,7 @@ GIFT_STORE.insert(
     },
     'A daily foaming cleanser that promotes visibly clearer skin without drying.',
     CLEANER,
+    1.99,
   ));
 
 GIFT_STORE.insert(
@@ -133,6 +139,7 @@ GIFT_STORE.insert(
     },
     'Deeply cleanse your skin with our purifying and balancing seaweed oil clay mask.',
     MASK,
+    1.99,
   ));
 
 GIFT_STORE.insert(
@@ -145,6 +152,7 @@ GIFT_STORE.insert(
     },
     'Hydrates and soothes, while leaving skin feeling fresh thanks to its mineral rich formula and liquid gel texture.',
     MASK,
+    1.99,
   ));
 
 GIFT_STORE.insert(
@@ -157,6 +165,7 @@ GIFT_STORE.insert(
     },
     'Help cleanse and nourish your skin with this clay mask infused with Lavender.',
     MASK,
+    1.99,
   ));
 
 GIFT_STORE.insert(
@@ -169,6 +178,7 @@ GIFT_STORE.insert(
     },
     'An intensive, creamy moisturizer for lips with the zesty pink grapefruit essence.',
     LIP,
+    1.99,
   ));
 
 GIFT_STORE.insert(
@@ -181,6 +191,7 @@ GIFT_STORE.insert(
     },
     'A restorative formula that hydrates lips while softening and smoothing for a beautiful, healthy-looking smile',
     LIP,
+    1.99,
   ));
 
 GIFT_STORE.insert(
@@ -193,6 +204,7 @@ GIFT_STORE.insert(
     },
     'A mixture of Shea Butter and Rice Wax offers deep hydration and softness.',
     LIP,
+    1.99,
   ));
 /* eslint-enable max-len */
 

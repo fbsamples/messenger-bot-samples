@@ -32,11 +32,12 @@ export default class Gift {
    * @param {string} description - Description of the gift.
    * @param {string} category - Category of this gift (`Gift.CATEGORIES`).
    */
-  constructor(id, name, images, description, category) {
+  constructor(id, name, images, description, category, price) {
     this.id = id;
     this.name = name;
     this.images = images;
     this.description = description;
     this.category = category;
+    this.price = price;
   }
 }

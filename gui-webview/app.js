@@ -21,6 +21,7 @@ import gifts from './routes/gifts';
 import index from './routes/index';
 import users from './routes/users';
 import webhooks from './routes/webhooks';
+import terms from './routes/terms';
 
 const app = express();
 
@@ -57,6 +58,7 @@ app.use('/', index);
 app.use('/users', users);
 app.use('/gifts', gifts);
 app.use('/webhook', webhooks);
+app.use('/terms', terms);
 
 /* ----------  Errors  ---------- */
 

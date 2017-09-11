@@ -19,16 +19,19 @@ import {
 /* ----------  Internal Imports  ---------- */
 
 import WebviewControls from '../messenger-api-helpers/webview-controls';
+import purchase from './purchase';
+import logger from './fba-logging';
 
 const selectGift = (giftId, userId) => {
+  logger.fbLog('select_gift_start', {gift_id: giftId}, userId);
   fetch(`/users/${userId}/gift/${giftId}`, {
     method: 'PUT',
   }).then((response) => {
     if (response.ok) {
-      console.log('Data successfully updated on the server!');
+      logger.fbLog('select_gift_success', {gift_id: giftId}, userId);
       return;
     }
-
+    logger.fbLog('select_gift_error', {gift_id: giftId}, userId);
     console.error(
       response.status,
       `Unable to save gift for User ${userId}'`
@@ -36,6 +39,11 @@ const selectGift = (giftId, userId) => {
   }).catch((err) => console.error('Error pushing data', err)).then(() => {
     WebviewControls.close();
   });
+};
+
+const buyNow = (giftId, userId) => {
+  logger.fbLog('payment_step', {step: "start_purchase", gift_id: giftId}, userId);
+  purchase.buyItem(giftId, userId);
 };
 
 /*
@@ -55,9 +63,12 @@ const Gift = ({id, name, images, description, userId}) => {
           </div>
         </div>
       </div>
-      <ButtonArea className='see-options'>
+      <ButtonArea className='see-options' direction='horizontal'>
         <Button onClick={() => selectGift(id, userId)}>
-          Choose This Gift
+          Choose Gift
+        </Button>
+        <Button onClick={() => buyNow(id, userId)}>
+          Buy Now
         </Button>
       </ButtonArea>
     </div>
