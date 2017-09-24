@@ -10,6 +10,7 @@ import express from 'express';
 
 // ===== MESSENGER =============================================================
 import receiveApi from '../messenger-api-helpers/receive';
+import logger from '../messenger-api-helpers/fba-logging';
 
 const router = express.Router();
 
@@ -59,16 +60,15 @@ router.post('/', (req, res) => {
     // Iterate over each entry
     // There may be multiple if batched
     data.entry.forEach((pageEntry) => {
-      if (!pageEntry.messaging) {
-        return;
-      }
       // Iterate over each messaging event and handle accordingly
       pageEntry.messaging.forEach((messagingEvent) => {
         console.log({messagingEvent});
         if (messagingEvent.message) {
           receiveApi.handleReceiveMessage(messagingEvent);
-        } if (messagingEvent.postback) {
+        } else if (messagingEvent.postback) {
           receiveApi.handleReceivePostback(messagingEvent);
+        } else if (messagingEvent.referral) {
+          receiveApi.handleReceiveReferral(messagingEvent);
         } else {
           console.log(
             'Webhook received unknown messagingEvent: ',

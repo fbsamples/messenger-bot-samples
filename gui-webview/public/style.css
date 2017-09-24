@@ -219,6 +219,10 @@ section {
   margin-bottom: 2rem;
 }
 
+.weui-btn-area_inline.see-options {
+  width: 91%;
+}
+
 #arrivalPeriod .weui-cell__hd:first-child {
   display: none;
 }

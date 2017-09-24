@@ -91,7 +91,7 @@ export default class User {
     this.arrivalPeriod = arrivalPeriod;
     this.environment = environment;
     this.skinTypes = skinTypes;
-    this.preferedGift = GiftStore.getByCategoryId(giftCategory)[0];
+    this.preferredGift = GiftStore.getByCategoryId(giftCategory)[0];
   }
 
   /**
@@ -104,13 +104,13 @@ export default class User {
   }
 
   /**
-   * Set the users preferedGift to the gift matching the id
+   * Set the users preferredGift to the gift matching the id
    *
-   * @param {String} giftId Id of the gift to set as the users prefered gift.
+   * @param {String} giftId Id of the gift to set as the users preferred gift.
    * @returns {undefined}
    * @memberOf User
    */
-  setPreferedGift(giftId) {
-    this.preferedGift = GiftStore.get(giftId);
+  setPreferredGift(giftId) {
+    this.preferredGift = GiftStore.get(giftId);
   }
 }

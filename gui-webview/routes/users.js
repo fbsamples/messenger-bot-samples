@@ -55,4 +55,15 @@ router.put('/:userID/gift/:giftID', ({params: {userID, giftID}}, res) => {
   receiveApi.handleNewGiftSelected(userID, giftID);
 });
 
+/**
+ * Send purchase confirmation into thread.
+ */
+router.put('/:userID/purchase/:giftID', ({params: {userID, giftID}}, res) => {
+  console.log('PUT User Purchase response:', {userID, giftID});
+
+  res.sendStatus(204);
+  receiveApi.handleNewGiftPurchased(userID, giftID);
+});
+
+
 export default router;

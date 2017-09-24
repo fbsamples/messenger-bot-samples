@@ -17,6 +17,7 @@ import ReactDOM from 'react-dom';
 import App from './app.jsx';
 import Oops from './oops.jsx';
 import Gift from './gift.jsx';
+import Terms from './terms.jsx';
 
 /* ----------  Styles  ---------- */
 
@@ -27,8 +28,8 @@ import '../public/style.css';
 // Simple initializer for attaching the Preferences App to the DOM
 window.attachApp = (userId, gift) => {
   /**
-   * MessengerExtensions are only available on iOS and Android,
-   * so show an error page if MessengerExtensions was unable to start
+   * getContext is only available on iOS and Android,
+   * so show an error page if userId is undefined
    */
   if (userId) {
     const app = gift
@@ -40,12 +41,14 @@ window.attachApp = (userId, gift) => {
   }
 };
 
+
+// Simple initializer for attaching the Terms and Conditions to the DOM
+window.attachTerms = () => {
+  ReactDOM.render(<Terms />, document.getElementById('content'));
+};
+
 // Simple initializer for attaching the Gift Page to the DOM
 window.attachGift = (gift, userId) => {
-  /**
-   * MessengerExtensions are only available on iOS and Android,
-   * so show an error page if MessengerExtensions was unable to start
-   */
   const app = userId
     ? <Gift {...gift} userId={userId} />
     : <Oops />;
