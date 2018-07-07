@@ -26,7 +26,12 @@ const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
 const callAPI = (endPoint, messageDataArray, queryParams = {}, retries = 5) => {
   // Error if developer forgot to specify an endpoint to send our request to
   if (!endPoint) {
-    console.error('callAPI requires you specify an endpoint.');
+    console.error('callAPI requires you to specify an endpoint.');
+    return;
+  }
+
+  if (!PAGE_ACCESS_TOKEN) {
+    console.error('callAPI requires you to specify a page access token.');
     return;
   }
 

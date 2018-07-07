@@ -12,7 +12,10 @@ const router = express.Router();
 
 // GET home page
 router.get('/', (_, res) => {
-  res.render('./index', {demo: process.env.DEMO});
+  res.render('./index', {
+    demo: process.env.DEMO,
+    listId: null,
+  });
 });
 
 export default router;

@@ -31,7 +31,8 @@ describe('User', () => {
   describe('findOrCreate', () => {
     it('creates and returns a new User', (done) => {
       Users.findOrCreate({
-        fb_id: '7', // eslint-disable-line camelcase
+        // eslint-disable-next-line camelcase
+        fb_id: '7',
       })
         .then((user) => {
           expect(user).to.be.an('object');
@@ -47,19 +48,17 @@ describe('User', () => {
       Knex('users').select()
         .then((users) => {
           userCount = users.length;
-
-          return Users.findOrCreate({fb_id: '1'}); // eslint-disable-line camelcase
+          // eslint-disable-next-line camelcase
+          return Users.findOrCreate({fb_id: '1'});
         })
         .then((user) => {
           expect(user).to.be.an('object');
           expect(user).to.have.property('fbId');
           expect(user.fbId).to.equal('1');
-
           return Knex('users').select();
         })
         .then((users) => {
           expect(users.length).to.equal(userCount);
-
           done();
         });
     });

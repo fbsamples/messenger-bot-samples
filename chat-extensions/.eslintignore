@@ -56,3 +56,4 @@ jspm_packages
 
 webpack.config.js
 
+public/bundle.js

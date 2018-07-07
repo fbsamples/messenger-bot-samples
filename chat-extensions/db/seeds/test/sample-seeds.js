@@ -9,8 +9,12 @@ const {getListsItems, getUsersLists, LISTS, USERS} =
   require('../sample-seed-helpers');
 
 /**
- * Test ENV Seed File - When run with `knex seed:run`, populates
- *                      database with placeholder data.
+ * Test ENV Seed File - When run with `knex seed:run`,
+ * populates database with placeholder data.
+ * @param {string} knex - Knex dependency
+ * @param {Promise} Promise - Promise dependency
+ * @returns {Promise} A single Promise that resolves when
+ * user and list items have been inserted into the database.
  */
 exports.seed = (knex, Promise) =>
   Promise.all([

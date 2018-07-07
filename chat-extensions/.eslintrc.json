@@ -1,0 +1,13 @@
+{
+  "extends": [
+    "metalab",
+    "metalab/react"
+  ],
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "no-console": 0
+  }
+}

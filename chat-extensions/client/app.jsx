@@ -228,16 +228,16 @@ export default class App extends React.Component {
     socket.on('user:join', this.userJoin);
     socket.on('users:setOnline', this.setOnlineUsers);
 
-    var self = this;
+    const self = this;
     // Check for permission, ask if there is none
     window.MessengerExtensions.getGrantedPermissions(function(response) {
       // check if permission exists
-      var permissions = response.permissions;
+      const permissions = response.permissions;
       if (permissions.indexOf('user_profile') > -1) {
         self.pushToRemote('user:join', {id: self.props.viewerId});
       } else {
         window.MessengerExtensions.askPermission(function(response) {
-          var isGranted = response.isGranted;
+          const isGranted = response.isGranted;
           if (isGranted) {
             self.pushToRemote('user:join', {id: self.props.viewerId});
           } else {

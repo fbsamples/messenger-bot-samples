@@ -29,9 +29,6 @@ const domainWhitelisting = () => {
       setting_type: 'domain_whitelisting',
       whitelisted_domains: [APP_URL],
       domain_action_type: 'add',
-    },
-    {
-      fields: 'whitelisted_domains',
     }
   );
 };

@@ -12,7 +12,7 @@
       // Use a random demo ID when viewing locally.
       const userId = Math.floor(Math.random() * 4) + 1;
       window.attachApp(userId, <%= listId %>, "<%= socketAddress %>");
-    <% } else { %>
+    <% } else if (listId) { %>
       window.extAsyncInit = function() {
         MessengerExtensions.getContext(
           '1898084047093164',

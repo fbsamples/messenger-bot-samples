@@ -8,7 +8,7 @@
 /* eslint-disable react/react-in-jsx-scope */
 
 /* ----------  External Libraries  ---------- */
-
+// eslint-disable-next-line
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -20,7 +20,7 @@ import Oops from './oops.jsx';
 /* ----------  Stylesheets  ---------- */
 
 import 'weui';
-import 'react-weui/lib/react-weui.min.css';
+import 'react-weui/build/packages/react-weui.css';
 import '../public/style.css';
 
 /*
