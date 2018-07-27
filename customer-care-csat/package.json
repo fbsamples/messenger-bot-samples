@@ -1,0 +1,13 @@
+{
+  "name": "customer-care-csat",
+  "version": "1.0.0",
+  "description": "A customer care bot blueprint for Facebook Messenger. Measures customer satisfaction after handing over a conversation to a live agent.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Facebook Inc.",
+  "dependencies": {
+    "messenger-node": "^0.3.1"
+  }
+}
