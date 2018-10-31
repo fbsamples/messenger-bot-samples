@@ -8,6 +8,9 @@ views/index.ejs contains the client side code in javascript.
 
 the sample bot to drive the conversation is thread is based on node.js, you can start with from the app.js file.
 
+See video demo:
+https://pxl.cl/jr4f 
+
 For additional information about Customer Chat Plugin: 
 https://developers.facebook.com/docs/messenger-platform/discovery/customer-chat-plugin/
 
