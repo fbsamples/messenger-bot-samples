@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <title>Jasper's Kitchen</title>
+</head>
+<body>
+    <script>
+      let pluginIsActive
+      let pluginIsLoaded
+
+      function toggleCustomerChat() {
+        if (pluginIsLoaded && pluginIsActive) {
+          FB.CustomerChat.hide()
+        } else if (pluginIsLoaded) {
+          FB.CustomerChat.show();
+        } else {
+          FB.XFBML.parse()
+          pluginIsActive = true
+        }
+      }
+
+      function statusChangeCallback(response) {
+        console.log('statusChangeCallback');
+        console.log(response);
+
+        if (response.status === 'unknown') {
+          $('.alert-dark').show()
+        } else {
+          $('.alert-info').show()
+          FB.XFBML.parse()
+          pluginIsActive = true
+        }
+      }
+
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId            : <%= appId %>,
+          autoLogAppEvents : true,
+          xfbml            : false,
+          version          : 'v3.1'
+        });
+
+        // Now that we've initialized the JavaScript SDK, we call
+        // FB.getLoginStatus().  This function gets the state of the
+        // person visiting this page and can return one of three states to
+        // the callback you provide.  They can be:
+        //
+        // 1. Logged into your app ('connected')
+        // 2. Logged into Facebook, but not your app ('not_authorized')
+        // 3. Not logged into Facebook and can't tell if they are logged into
+        //    your app or not.
+        //
+        // These three cases are handled in the callback function.
+
+        FB.getLoginStatus(function(response) {
+          statusChangeCallback(response);
+         });
+
+        FB.Event.subscribe('customerchat.show', () => pluginIsActive = true);
+        FB.Event.subscribe('customerchat.hide', () => pluginIsActive = false);
+        FB.Event.subscribe('customerchat.load', () => pluginIsLoaded = true);
+
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+
+    </script>
+
+    <div class="container-fluid">
+      <h1>Jasper's Kitchen</h1>
+      <p>Questions about your order? We're here to help you!</p>
+
+      <div class="alert alert-info" role="alert">
+        Hey! you have an active Facebook session. We can chat on Messenger!
+      </div>
+
+      <div class="alert alert-dark" role="alert">
+        Hey! You are logged out of Facebook. Drop us a line on our contact page!
+      </div>
+
+      <button type="button" class="btn btn-dark" onclick="toggleCustomerChat()">Toggle Customer Chat</button>
+
+      <!-- Your customer chat code -->
+      <div class="fb-customerchat"
+        page_id="<%= pageId %>"
+        theme_color="#028DA7">
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+</body>
+</html>

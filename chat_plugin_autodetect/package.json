@@ -1,0 +1,19 @@
+{
+  "name": "jasperskitchen",
+  "version": "1.0.0",
+  "description": "Messenger Bot Sample",
+  "main": "app.js",
+  "author": "Laura Lebovic",
+  "license": "MIT",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.1.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "localtunnel": "^1.9.1",
+    "request": "^2.88.0"
+  }
+}
