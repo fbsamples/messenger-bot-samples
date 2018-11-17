@@ -24,11 +24,9 @@ const {APP_URL} = process.env;
  * @returns {undefined}
  */
 const domainWhitelisting = () => {
-  api.callThreadAPI(
+  api.callMessengerProfileAPI(
     {
-      setting_type: 'domain_whitelisting',
-      whitelisted_domains: [APP_URL],
-      domain_action_type: 'add',
+      whitelisted_domains: [APP_URL]
     }
   );
 };
@@ -39,29 +37,33 @@ const domainWhitelisting = () => {
  * @returns {undefined}
  */
 const persistentMenu = () => {
-  api.callThreadAPI(
+  api.callMessengerProfileAPI(
     {
-      setting_type: 'call_to_actions',
-      thread_state: 'existing_thread',
-      call_to_actions: [
+      persistent_menu: [
         {
-          type: 'web_url',
-          title: 'Create List',
-          url: `${APP_URL}/lists/new`,
-          webview_height_ratio: 'tall',
-          messenger_extensions: true,
-        },
-        {
-          type: 'postback',
-          title: 'My Lists',
-          payload: 'owned_lists',
-        },
-        {
-          type: 'postback',
-          title: 'Shared With Me',
-          payload: 'subscribed_lists',
-        },
-      ],
+          locale: 'default',
+          composer_input_disabled: true,
+          call_to_actions: [
+            {
+              type: 'web_url',
+              title: 'Create List',
+              url: `${APP_URL}/lists/new`,
+              webview_height_ratio: 'tall',
+              messenger_extensions: true,
+            },
+            {
+              type: 'postback',
+              title: 'My Lists',
+              payload: 'owned_lists',
+            },
+            {
+              type: 'postback',
+              title: 'Shared With Me',
+              payload: 'subscribed_lists',
+            },
+          ]
+        }
+      ]
     }
   );
 };
@@ -72,15 +74,11 @@ const persistentMenu = () => {
  * @returns {undefined}
  */
 const getStartedButton = () => {
-  api.callThreadAPI(
+  api.callMessengerProfileAPI(
     {
-      setting_type: 'call_to_actions',
-      thread_state: 'new_thread',
-      call_to_actions: [
-        {
-          payload: 'get_started',
-        },
-      ],
+      get_started: {
+        payload: "get_started"
+      }
     }
   );
 };
