@@ -62,10 +62,9 @@ const handleReceivePostback = (event) => {
   } else if (type.substring(0, 11) === 'get_started') {
     sendApi.sendWelcomeMessage(senderId);
     return;
+  } else {
+    console.error(`Unknown Postback called: ${type}`);
   }
-  // eslint-enable camelcase
-
-  sendApi.sendMessage(senderId, `Unknown Postback called: ${type}`);
 };
 
 /*
