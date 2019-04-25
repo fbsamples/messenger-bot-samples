@@ -52,7 +52,6 @@ const sendMessage = (recipientId, messagePayloads) => {
   api.callMessagesAPI([
     typingOn(recipientId),
     ...messagePayloadArray,
-    typingOff(recipientId),
   ]);
 };
 
