@@ -45,7 +45,7 @@ const getDetailsFromFacebook = (userId, callback) => {
   request(
     {
       method: 'GET',
-      url: `https://graph.facebook.com/v2.6/${userId}`,
+      url: `https://graph.facebook.com/v3.2/${userId}`,
       json: true,
       qs: {
         access_token: process.env.PAGE_ACCESS_TOKEN,

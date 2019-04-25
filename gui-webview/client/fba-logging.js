@@ -30,7 +30,7 @@ const fbLog = (eventName, payload, psid) => {
       page_scoped_user_id: psid
     });
 
-    fetch("https://graph.facebook.com/v2.6/" + process.env.APP_ID + "/activities", {
+    fetch("https://graph.facebook.com/v3.2/" + process.env.APP_ID + "/activities", {
         method: 'post',
         headers: {
             'Accept': 'application/json, text/plain, */*',
