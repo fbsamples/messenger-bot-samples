@@ -11,20 +11,14 @@
 
 import React from 'react';
 
-/*
- * MessengerExtensions are only available on iOS and Android,
- * so show an error page if MessengerExtensions was unable to start
- */
 const Oops = () => {
   return (
     <div id='oops'>
       <div id='oops-body'>
-        <h1>Viewing Outside Messenger App</h1>
+        <h1>Failed to initialize</h1>
 
         <div id='oops-subtitle'>
-          <p>It looks like you're viewing this list outside of the Messenger app. This experience has been designed to work within the app on iOS or Android.</p>
-          <br />
-          <p>Head over to the Messenger app on your mobile device for a better experience.</p>
+          <p>It looks like something went wrong. Sorry for the inconvenience!</p>
         </div>
       </div>
     </div>

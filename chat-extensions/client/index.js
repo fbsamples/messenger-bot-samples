@@ -42,8 +42,8 @@ window.attachApp = (viewerId, listId, socketAddress, threadType) => {
     );
   } else {
     /**
-     * MessengerExtensions are only available on iOS and Android,
-     * so show an error page if MessengerExtensions was unable to start
+     * The Messenger Extension could not be initialized.
+     * Maybe you forgot to whitelist your domain or the user runs a very old version of Messenger.
      */
     app = <Oops />;
   }
