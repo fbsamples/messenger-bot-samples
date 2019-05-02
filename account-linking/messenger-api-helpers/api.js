@@ -86,11 +86,11 @@ const callMessagesAPI = (messageDataArray, queryParams = {}) => {
   return callAPI('messages', messageDataArray, queryParams);
 };
 
-const callThreadAPI = (messageDataArray, queryParams = {}) => {
-  return callAPI('thread_settings', messageDataArray, queryParams);
+const callMessengerProfileAPI = (messageDataArray, queryParams = {}) => {
+  return callAPI('messenger_profile', messageDataArray, queryParams);
 };
 
 export default {
   callMessagesAPI,
-  callThreadAPI,
+  callMessengerProfileAPI,
 };

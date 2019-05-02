@@ -15,7 +15,7 @@ import api from './api';
  * @returns {undefined}
  */
 const setGetStarted = () => {
-  api.callThreadAPI(messages.getStarted);
+  api.callMessengerProfileAPI(messages.getStarted);
 };
 
 export default {setGetStarted};
