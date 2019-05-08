@@ -220,12 +220,16 @@ const giftPurchasedMessage = (giftId) => {
  * The persistent menu for users to use.
  */
 const persistentMenu = {
-  setting_type: 'call_to_actions',
-  thread_state: 'existing_thread',
-  call_to_actions: [
-    setPreferencesButton,
-    changeGiftButton,
-  ],
+  persistent_menu: [
+    {
+      'locale': 'default',
+      'composer_input_disabled': false,
+      'call_to_actions': [
+        setPreferencesButton,
+        changeGiftButton
+      ]
+    }
+  ]
 };
 
 /**
