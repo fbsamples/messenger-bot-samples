@@ -12,7 +12,7 @@
     "start": "node ./bin/www",
     "build:watch": "webpack --watch",
     "build": "webpack -p --progress --colors",
-    "heroku-postbuild": "knex migrate:latest --env production",
+    "heroku-postbuild": "npm run build && knex migrate:latest --env production",
     "lint-css": "recess ./public/style.css --noIDs false --noUnderscores false",
     "lint-js": "eslint .",
     "test": "NODE_ENV=test mocha --require @babel/register --recursive",
