@@ -6,8 +6,9 @@
  */
 
 // ===== MODULES ===============================================================
-import React, {createElement} from 'react';
+import React from 'react';
 import {Cell, CellBody, CellHeader, Input} from 'react-weui';
+import PropTypes from 'prop-types';
 
 const SCROLL_DURATION = 1000; // total duration in ms for scroll animation.
 
@@ -74,10 +75,10 @@ const NewItem = ({
 };
 
 NewItem.proptypes = {
-  addNewItem: React.PropTypes.func.isRequired,
-  disabled: React.PropTypes.bool.isRequired,
-  newItemText: React.PropTypes.string,
-  setNewItemText: React.PropTypes.func.isRequired,
+  addNewItem: PropTypes.func.isRequired,
+  disabled: PropTypes.bool.isRequired,
+  newItemText: PropTypes.string,
+  setNewItemText: PropTypes.func.isRequired,
 };
 
 export default NewItem;

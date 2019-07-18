@@ -11,6 +11,7 @@
 
 import React from 'react';
 import {Footer, FooterText} from 'react-weui';
+import PropTypes from 'prop-types';
 
 // Updating status indicator
 const Updating = ({updating}) => {
@@ -29,7 +30,7 @@ const Updating = ({updating}) => {
 };
 
 Updating.propTypes = {
-  updating: React.PropTypes.bool.isRequired,
+  updating: PropTypes.bool.isRequired,
 };
 
 export default Updating;

@@ -7,9 +7,10 @@
 
 // ===== MODULES ===============================================================
 import io from 'socket.io-client';
-import React, {createElement} from 'react';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import React from 'react';
+import ReactCSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import {Panel, Form} from 'react-weui';
+import PropTypes from 'prop-types';
 
 // ===== COMPONENTS ============================================================
 import Invite from './invite.jsx';
@@ -53,12 +54,12 @@ export default class App extends React.Component {
     };
   }
 
-  static propTypes = {
-    apiUri: React.PropTypes.string.isRequired,
-    listId: React.PropTypes.number.isRequired,
-    socketAddress: React.PropTypes.string.isRequired,
-    viewerId: React.PropTypes.number.isRequired,
-    threadType: React.PropTypes.string.isRequired,
+  static defaultProps = {
+    apiUri: PropTypes.string.isRequired,
+    listId: PropTypes.number.isRequired,
+    socketAddress: PropTypes.string.isRequired,
+    viewerId: PropTypes.number.isRequired,
+    threadType: PropTypes.string.isRequired,
   }
 
   /* =============================================

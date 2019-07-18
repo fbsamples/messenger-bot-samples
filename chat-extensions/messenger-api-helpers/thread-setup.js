@@ -26,7 +26,7 @@ const {APP_URL} = process.env;
 const domainWhitelisting = () => {
   api.callMessengerProfileAPI(
     {
-      whitelisted_domains: [APP_URL]
+      whitelisted_domains: [APP_URL],
     }
   );
 };
@@ -61,9 +61,9 @@ const persistentMenu = () => {
               title: 'Shared With Me',
               payload: 'subscribed_lists',
             },
-          ]
-        }
-      ]
+          ],
+        },
+      ],
     }
   );
 };
@@ -77,8 +77,8 @@ const getStartedButton = () => {
   api.callMessengerProfileAPI(
     {
       get_started: {
-        payload: "get_started"
-      }
+        payload: 'get_started',
+      },
     }
   );
 };

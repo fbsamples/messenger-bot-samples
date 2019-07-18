@@ -43,7 +43,8 @@ window.attachApp = (viewerId, listId, socketAddress, threadType) => {
   } else {
     /**
      * The Messenger Extension could not be initialized.
-     * Maybe you forgot to whitelist your domain or the user runs a very old version of Messenger.
+     * Maybe you forgot to whitelist your domain or the
+     * user runs a very old version of Messenger.
      */
     app = <Oops />;
   }

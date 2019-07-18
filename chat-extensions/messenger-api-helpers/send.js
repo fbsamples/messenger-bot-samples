@@ -24,16 +24,6 @@ const typingOn = (recipientId) => {
   };
 };
 
-// Turns typing indicator off.
-const typingOff = (recipientId) => {
-  return {
-    recipient: {
-      id: recipientId,
-    },
-    sender_action: 'typing_off', // eslint-disable-line camelcase
-  };
-};
-
 // Wraps a message JSON object with recipient information.
 const messageToJSON = (recipientId, messagePayload) => {
   return {

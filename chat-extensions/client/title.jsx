@@ -6,8 +6,9 @@
  */
 
 // ===== External Libraries ====================================================
-import React, {createElement} from 'react';
+import React from 'react';
 import {Input} from 'react-weui';
+import PropTypes from 'prop-types';
 
 // List title field
 const Title = ({text, setTitleText}) => {
@@ -23,8 +24,8 @@ const Title = ({text, setTitleText}) => {
 };
 
 Title.propTypes = {
-  text: React.PropTypes.string,
-  setTitleText: React.PropTypes.func.isRequired,
+  text: PropTypes.string,
+  setTitleText: PropTypes.func.isRequired,
 };
 
 export default Title;

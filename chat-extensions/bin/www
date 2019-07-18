@@ -7,9 +7,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-require('babel-register')({
-  presets: ['env', 'react'],
-  plugins: ['transform-class-properties'],
+require('@babel/register')({
+  presets: ['@babel/preset-env', '@babel/preset-react'],
+  plugins: ['@babel/plugin-proposal-class-properties', '@babel/plugin-proposal-object-rest-spread'],
 });
 
 // ===== MODULES ===============================================================

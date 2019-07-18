@@ -11,6 +11,7 @@
 
 import React from 'react';
 import {Button} from 'react-weui';
+import PropTypes from 'prop-types';
 
 /* ----------  Messenger Helpers  ---------- */
 
@@ -53,7 +54,7 @@ const Invite = ({
 };
 
 Invite.PropTypes = {
-  shareList: React.PropTypes.func.isRequired,
+  shareList: PropTypes.func.isRequired,
 };
 
 export default Invite;

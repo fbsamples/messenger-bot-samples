@@ -10,6 +10,7 @@
 /* ----------  External Libraries  ---------- */
 import React from 'react';
 import {CellBody, CellFooter, CellHeader, Checkbox, FormCell} from 'react-weui';
+import PropTypes from 'prop-types';
 
 /*
  * A single list item, including controls
@@ -54,15 +55,15 @@ const Item = ({
 };
 
 Item.PropTypes = {
-  id: React.PropTypes.number.isRequired,
-  name: React.PropTypes.string.isRequired,
-  viewerId: React.PropTypes.string.isRequired,
-  pushUpdatedItem: React.PropTypes.func.isRequired,
-  ownerFbId: React.PropTypes.string.isRequired,
-  completerFbId: React.PropTypes.string,
-  users: React.PropTypes.arrayOf(React.PropTypes.shape({
-    id: React.PropTypes.string.isRequired,
-    name: React.PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  viewerId: PropTypes.string.isRequired,
+  pushUpdatedItem: PropTypes.func.isRequired,
+  ownerFbId: PropTypes.string.isRequired,
+  completerFbId: PropTypes.string,
+  users: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
   })).isRequired,
 };
 

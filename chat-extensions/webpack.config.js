@@ -7,7 +7,7 @@
 
 var path = require('path');
 
-module.exports = [{
+module.exports = {
   context: path.join(__dirname),
   entry: 'index',
   output: {
@@ -15,16 +15,19 @@ module.exports = [{
     filename: 'bundle.js'
   },
   module: {
-    loaders: [
-      { test: /\.css$/, loader: 'style-loader!css-loader?-svgo' },
+    rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
       {
         test: /\.(jpg|png|svg)$/,
-        loader: 'url-loader',
+        use: ['url-loader'],
       },
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'babel-loader'
+        use: ['babel-loader'],
       }
     ]
   },
@@ -35,4 +38,4 @@ module.exports = [{
       'node_modules'
     ]
   }
-}];
+};
