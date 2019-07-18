@@ -8,6 +8,6 @@
   },
   "author": "Facebook Inc.",
   "dependencies": {
-    "messenger-node": "^0.3.1"
+    "messenger-node": "^0.3.2"
   }
 }
