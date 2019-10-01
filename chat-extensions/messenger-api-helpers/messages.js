@@ -179,7 +179,14 @@ const listCreatedMessage = {
 };
 
 /**
- * Message to configure the customized sharing menu in the webview
+ * Message that informs the user that their list can be shared.
+ */
+const listShareMessage = {
+  text: 'To share the list, simply forward the item below to your friends.',
+};
+
+/**
+ * Message template for sharing a list with another user
  *
  * @param {string} apiUri - Application basename
  * @param {string} listId - The ID for list to be shared
@@ -214,6 +221,7 @@ const shareListMessage = (apiUri, listId, title, buttonText) => {
 export default {
   welcomeMessage,
   listCreatedMessage,
+  listShareMessage,
   paginatedListsMessage,
   createListButton,
   noListsMessage,

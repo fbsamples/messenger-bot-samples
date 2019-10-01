@@ -35,6 +35,7 @@ export default class App extends React.Component {
     this.addItem = this.addItem.bind(this);
     this.addNewItem = this.addNewItem.bind(this);
     this.pushUpdatedItem = this.pushUpdatedItem.bind(this);
+    this.pushToRemote = this.pushToRemote.bind(this);
     this.setDocumentTitle = this.setDocumentTitle.bind(this);
     this.setItem = this.setItem.bind(this);
     this.setNewItemText = this.setNewItemText.bind(this);
@@ -305,10 +306,9 @@ export default class App extends React.Component {
         invite = (
           <Invite
             title={title}
-            apiUri={apiUri}
-            listId={listId}
             sharingMode={sharingMode}
             buttonText={buttonText}
+            pushToRemote={this.pushToRemote}
           />
         );
       }

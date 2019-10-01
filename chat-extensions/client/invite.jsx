@@ -13,32 +13,18 @@ import React from 'react';
 import {Button} from 'react-weui';
 import PropTypes from 'prop-types';
 
-/* ----------  Messenger Helpers  ---------- */
-
-import messages from '../messenger-api-helpers/messages';
-
 /*
- * Button to invite firends by invoking the share menu
+ * Button to share list with friends
  */
 const Invite = ({
   title,
-  listId,
-  apiUri,
   sharingMode,
   buttonText,
-  imgSource,
+  pushToRemote
 }) => {
   const shareList = () => {
-    window.MessengerExtensions.beginShareFlow(
-      function success(response) {
-        if (response.is_sent) {
-          window.MessengerExtensions.requestCloseBrowser(null, null);
-        }
-      }, function error(errorCode, errorMessage) {
-        console.error({errorCode, errorMessage});
-      },
-      messages.shareListMessage(apiUri, listId, title),
-      sharingMode);
+    pushToRemote('share:list', {title});
+    window.MessengerExtensions.requestCloseBrowser(null, null);
   };
 
   const iconClassName = sharingMode === 'broadcast' ? 'share' : 'send';
@@ -54,7 +40,10 @@ const Invite = ({
 };
 
 Invite.PropTypes = {
-  shareList: PropTypes.func.isRequired,
+  title: PropTypes.string,
+  sharingMode: PropTypes.bool,
+  buttonText: PropTypes.string,
+  pushToRemote: PropTypes.func.isRequired,
 };
 
 export default Invite;

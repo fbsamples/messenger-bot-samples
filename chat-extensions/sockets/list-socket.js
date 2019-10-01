@@ -9,6 +9,9 @@
 import Lists from '../models/lists';
 import ListsItems from '../models/lists-items';
 
+// ===== MESSENGER =============================================================
+import sendApi from '../messenger-api-helpers/send';
+
 // Update the title of the given List and
 // notifies all subscribed users of the change.
 const updateTitle = ({request: {listId, title}, sendStatus, socket}) => {
@@ -47,8 +50,22 @@ const updateItem = ({request, sendStatus, allInRoom}) => {
     });
 };
 
+// Shares a list into the thread from where it can be forwarded to other users
+const shareList = ({
+  request: {senderId, listId, title},
+  sendStatus
+}) => {
+  if (!listId) {
+    console.error('shareList: Invalid list ID');
+    return;
+  }
+  sendApi.sendListShareItem(senderId, listId, title);
+  sendStatus('ok');
+};
+
 export default {
   addItem,
   updateItem,
   updateTitle,
+  shareList,
 };

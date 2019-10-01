@@ -39,6 +39,7 @@ export default function attachSockets(io) {
     channel('push:item:add', ListSocket.addItem);
     channel('push:item:update', ListSocket.updateItem);
     channel('push:title:update', ListSocket.updateTitle);
+    channel('push:share:list', ListSocket.shareList);
     channel('push:user:join', UserSocket.join);
   });
 }

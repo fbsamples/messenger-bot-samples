@@ -112,9 +112,20 @@ const sendListCreated = (recipientId, listId, title) => {
     ]);
 };
 
+// Send a message notifying the user their list can be shared.
+const sendListShareItem = (recipientId, listId, title) => {
+  sendMessage(
+    recipientId,
+    [
+      messages.listShareMessage,
+      messages.shareListMessage(APP_URL, listId, title, 'Open List'),
+    ]);
+};
+
 export default {
   sendListCreated,
   sendLists,
+  sendListShareItem,
   sendMessage,
   sendNoListsYet,
   sendReadReceipt,
